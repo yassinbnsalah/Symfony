@@ -1,0 +1,14 @@
+#ajoute_article:
+#    path : /home/add 
+#    controller : App\Controller\ArticleController::index 
+
+#home : 
+#    path: /
+#    controller : App\Controller\HomeController::index 
+partenaire : 
+    path: /partenaire 
+    controller : App\Controller\PartenaireController::index 
+
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index

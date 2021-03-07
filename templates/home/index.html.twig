@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Home {% endblock %}
+
+
+{% block body %}
+<h1> <center> welcome to home page </center> </h1>
+
+<div class="container">
+  <div class="row justify-content-center" style="margin-top:30px">
+{% for article in articles %}
+
+<div class=" col-md-4">
+<div class="card w-75" style="width: 300px; height : 470px">
+  <a href="/home/{{article.id}}"><img  src="{{article.img}}" style="width : 300px; height :250px"class="card-img-top img-thumbnail" width="100" height="100" alt="..."></a>
+  <div class="card-body text-center">
+    <h5 class="card-title">{{article.libelle}}</h5>
+    <h4 class="card-text"><span class="badge rounded-pill bg-primary" style="color :white">{{article.price}}</span>DT</h4>
+    {% if article.quantite > 0 %}
+    <h3><span class="badge rounded-pill bg-success" style="color : white "> En stock </span></h3>
+    <a href="#" class="btn btn-primary">Ajouter au panier</a>
+    {% else %}
+    <h3><span class="badge rounded-pill bg-danger" style="color : white "> Repture de stock </span></h3>
+    <button type="submit" class="btn btn-primary" disabled>Ajouter au panier
+    {% endif %}
+  </div>
+</div>
+</div>
+{% endfor %}
+</div>
+</div>
+{% endblock %}

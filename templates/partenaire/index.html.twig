@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} about {% endblock %}
+
+{% block body %}
+  <h1> about working </h1>
+    <div class="container">
+      <div class="row justify-content-center">
+        {% for partenaire in partenaires %}
+          <img src="{{partenaire.image}}" style="width :100px " class="card-img-top"  alt="...">
+        {% endfor %}
+      </div>
+    </div>
+{% endblock %}

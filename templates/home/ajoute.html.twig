@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Home {% endblock %}
+
+{% block body %}
+<div class="container-sm">
+<h1> Ajouter un produit </h1>
+<form action="" method="post">
+ <div class="form-group">
+      <label for="libelle">libelle</label>
+      <input type="text" class="form-control" name="libelle"  placeholder="libelle">
+      <label for="img">img</label>
+      <input type="text" class="form-control" name="img" placeholder="image">
+      <label for="description">description</label>
+     <textarea class="form-control" name="description" aria-label="With textarea"></textarea>
+      <label for="categorie">categorie</label>
+      <input type="text" class="form-control" name="categorie"  placeholder="categorie">
+      <label for="quantite">quantite</label>
+      <input type="text" class="form-control" name="quantite" placeholder="quantite">
+        <label for="quantite">prix</label>
+      <input type="text" class="form-control" name="prix" placeholder="price">
+         <button type="submit" class="btn btn-success">ajouter </button>
+    </div>
+</form>
+</div>
+{% endblock %}

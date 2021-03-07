@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Details {% endblock %}
+
+{% block body %}
+<h1><center> Details de article {{article.libelle}} </h1>
+<div class="container">
+  <div class="row align-items-start">
+    <div class="col">
+    <img src="{{article.img}}" style="width : 400px ; height : 400px">
+    <h4> price de produit : {{article.price}} DT</h4>   
+     {% if article.quantite > 0 %}
+    <a href="#" class="btn btn-lg btn-primary"> ajouter aux panier </a>
+    {% endif %}
+    </div>
+    <div class="col">
+    <h3>  {{article.libelle}}  </h3> 
+    <h4> description de l'article : {{article.description}}</h4>
+     {% if article.quantite > 0 %}
+    <h3><span class="badge rounded-pill bg-success" style="color : white "> En stock </span></h3>
+    {% else %}
+    <h3><span class="badge rounded-pill bg-danger" style="color : white "> Repture de stock </span></h3>
+    {% endif %}
+    <a href="#" class="btn btn-lg btn-primary"> ajouter un commentaire </a>
+    </div>
+    </div>
+{% endblock %}
